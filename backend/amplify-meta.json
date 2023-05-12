@@ -1,0 +1,92 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-berlinbear-staging-141549-authRole",
+      "UnauthRoleArn": "arn:aws:iam::449187279302:role/amplify-berlinbear-staging-141549-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::449187279302:role/amplify-berlinbear-staging-141549-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-berlinbear-staging-141549-deployment",
+      "UnauthRoleName": "amplify-berlinbear-staging-141549-unauthRole",
+      "StackName": "amplify-berlinbear-staging-141549",
+      "StackId": "arn:aws:cloudformation:us-east-1:449187279302:stack/amplify-berlinbear-staging-141549/7f505120-f0cf-11ed-b81f-0a84830639f1",
+      "AmplifyAppId": "d3eur1yco5cms0"
+    }
+  },
+  "function": {
+    "berlinbear28607447": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-05-12T15:00:53.818Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-05-12T15:00:53.836Z",
+      "distZipFilename": "berlinbear28607447-534d634a707771495553-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-berlinbear-staging-141549-deployment",
+        "s3Key": "amplify-builds/berlinbear28607447-534d634a707771495553-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-berlinbear-staging-141549-deployment/amplify-cfn-templates/function/berlinbear28607447-cloudformation-template.json",
+        "logicalId": "functionberlinbear28607447"
+      },
+      "lastPushTimeStamp": "2023-05-12T15:07:44.594Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::449187279302:role/berlinbearLambdaRole563af2c1-staging",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:449187279302:function:berlinbear28607447-staging",
+        "Name": "berlinbear28607447-staging",
+        "LambdaExecutionRole": "berlinbearLambdaRole563af2c1-staging"
+      },
+      "lastPushDirHash": "W3aIA/L3wzwqjan54Fs0ACVzNSA="
+    }
+  },
+  "api": {
+    "api3583cedc": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "berlinbear28607447",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-berlinbear-staging-141549-deployment/amplify-cfn-templates/api/api3583cedc-cloudformation-template.json",
+        "logicalId": "apiapi3583cedc"
+      },
+      "lastPushTimeStamp": "2023-05-12T15:07:44.594Z",
+      "output": {
+        "ApiName": "api3583cedc",
+        "RootUrl": "https://8l3mjahphd.execute-api.us-east-1.amazonaws.com/staging",
+        "ApiId": "8l3mjahphd"
+      },
+      "lastPushDirHash": "HvmRDaV+BzVD8yl4vNUNTiYTB4k="
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "service": "S3AndCloudFront",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-berlinbear-staging-141549-deployment/amplify-cfn-templates/hosting/template.json",
+        "logicalId": "hostingS3AndCloudFront"
+      },
+      "lastPushTimeStamp": "2023-05-12T15:07:44.594Z",
+      "output": {
+        "CloudFrontSecureURL": "https://d18x8qs7z6vuot.cloudfront.net",
+        "S3BucketSecureURL": "https://erlinear-20230512163407-hostingbucket-staging.s3.amazonaws.com",
+        "CloudFrontOriginAccessIdentity": "E2X6CZ8DT7VLSF",
+        "WebsiteURL": "http://erlinear-20230512163407-hostingbucket-staging.s3-website-us-east-1.amazonaws.com",
+        "CloudFrontDistributionID": "E3FM2PNDI1DGN",
+        "Region": "us-east-1",
+        "HostingBucketName": "erlinear-20230512163407-hostingbucket-staging",
+        "CloudFrontDomainName": "d18x8qs7z6vuot.cloudfront.net"
+      },
+      "lastPushDirHash": "wiuzyAnHPQLK8vjwXQ8r54upPjY="
+    }
+  }
+}

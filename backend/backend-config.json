@@ -1,0 +1,49 @@
+{
+  "api": {
+    "api3583cedc": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "berlinbear28607447"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "berlinbear28607447": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "providerPlugin": "awscloudformation",
+      "service": "S3AndCloudFront"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_berlinbear28607447_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "berlinbear28607447"
+        }
+      ]
+    },
+    "AMPLIFY_function_berlinbear28607447_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "berlinbear28607447"
+        }
+      ]
+    }
+  }
+}
